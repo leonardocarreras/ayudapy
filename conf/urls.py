@@ -9,6 +9,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import TemplateView
 from rest_framework import routers
+from graphene_django.views import GraphQLView #GraphQL API
 
 from core import views as core_views
 
@@ -28,7 +29,8 @@ urlpatterns = [
     path('pedidos_ciudad/<slug:city>', core_views.list_by_city, name='pedidos-by-city'),
     path('pedidos', core_views.list_requests),
     path('preguntas_frecuentes', core_views.view_faq, name='general_faq'),
-    path('contacto', TemplateView.as_view(template_name="contact_us.html"), name='contact_us')
+    path('contacto', TemplateView.as_view(template_name="contact_us.html"), name='contact_us'),
+    path('api/gql/', GraphQLView.as_view(graphiql=True)), #GraphQL API
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -13,3 +13,4 @@ django-silk==4.0.1
 ua-parser~=0.10
 django-environ==0.4.5
 graphene_django==2.9.0
+django-graphql-geojson==0.1.4

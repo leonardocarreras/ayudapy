@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     'django_filters',
     'graphene_django',
+    'apigql'
 ]
 
 MIDDLEWARE = [
@@ -161,3 +162,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+#Graphene settings
+GRAPHENE = {
+    'SCHEMA': 'apigql.models.schema'
+    }
