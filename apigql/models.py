@@ -20,3 +20,4 @@ class Query(graphene.ObjectType):
         return HelpRequests.objects.all()
 
 schema = graphene.Schema(query=Query)
+
