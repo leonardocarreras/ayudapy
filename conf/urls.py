@@ -12,10 +12,11 @@ from rest_framework import routers
 from graphene_django.views import GraphQLView #GraphQL API
 
 from core import views as core_views
+from core import api as core_api
 
 router = routers.DefaultRouter()
-router.register(r'helprequests', core_views.HelpRequestViewSet)
-router.register(r'helprequestsgeo', core_views.HelpRequestGeoViewSet)
+router.register(r'helprequests', core_api.HelpRequestViewSet)
+router.register(r'helprequestsgeo', core_api.HelpRequestGeoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
