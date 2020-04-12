@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     'django_filters',
     'graphene_django',
-    'apigql'
+    'apigql',
 ]
 
 MIDDLEWARE = [
@@ -165,5 +165,6 @@ REST_FRAMEWORK = {
 
 #Graphene settings
 GRAPHENE = {
-    'SCHEMA': 'apigql.models.schema'
+    #'SCHEMA': 'apigql.models.schema'
+    'SCHEMA': 'core.schema.schema'
     }
